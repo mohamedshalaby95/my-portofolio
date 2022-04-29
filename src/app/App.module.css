@@ -23,22 +23,30 @@
   transition-duration: 1s;
   z-index: 5;
 }
+a{
+  text-decoration: none;
+}
 .routingComponent{
   position: fixed;
-  left: 260!important;
+  left: 260 !important;
   right: 0;
   top: 0;
   bottom: 0;
-  background: black url(https://j.gifs.com/KeBY2b.gif) ;
-
-  position: absolute;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   display: block;
-     z-index: 0;
-     color: white;
+ 
+ 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+  color: white;
+  
+    
+     
   
 }
 @media (min-width: 1025px) {

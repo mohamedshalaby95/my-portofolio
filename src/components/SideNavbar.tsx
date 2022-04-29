@@ -14,80 +14,57 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-const styleItem=  {cursor: "pointer",
-textTransform: "upperCase",
-width: "90%",
-padding: "10px",
-marginTop: "1px !important",
-borderRadius: "0px",
-color: "white",
-background:'transparent',
-position: "relative",
-zIndex: "5",
-"&:before": {
-  content: `''`,
-  position: "absolute",
-  left:"0",
-  backgroundColor:"#037FFF",
-  width: "0",
-  top: "0",
-  bottom: "0",
-  transition: "2s ease-in-out all",
-  opacity:'.6'
-},
-"&:hover:before":  {
-  width:'100%',
-  
-},
-}
+const styleItem = {
+  cursor: "pointer",
+  textTransform: "upperCase",
+  width: "90%",
+  padding: "10px",
+  marginTop: "1px !important",
+  borderRadius: "0px",
+  color: "white",
+  background: "transparent",
+  position: "relative",
+  zIndex: "5",
+  "&:before": {
+    content: `''`,
+    position: "absolute",
+    left: "0",
+    backgroundColor: "#037FFF",
+    width: "0",
+    top: "0",
+    bottom: "0",
+    transition: "2s ease-in-out all",
+    opacity: ".6",
+  },
+  "&:hover:before": {
+    width: "100%",
+  },
+};
 
 const SideNavbar = () => {
- 
   return (
     <>
-      <Box sx={{ background: "black" ,height:'100vh'}}>
+      <Box sx={{ background: "black", height: "100vh" }}>
         <Stack spacing={2} alignItems="center">
           <Avatar
-            alt="Remy Sharp"
-            src="/static/images/avatar/1.jpg"
+            alt="pesonal image"
+            src="/images/shalaby.jpg"
             sx={{ width: 150, height: 150, marginTop: "70px" }}
           />
           <hr className={classes.default.hrStyel} />
-          <Item
-            sx={  {...styleItem ,marginTop:'60px !important'} }
-          >
-          {/* <Link to='/'>
-          Home
-          </Link>  */}
+
+          <Item sx={{ ...styleItem, marginTop: "60px !important" }}>
+            <Link to="/" style={{position:'relative',zIndex:4}}>Home</Link>
           </Item>
-          <Item
-            sx={ styleItem}
-          >
-            About
+
+          <Item sx={styleItem}>
+            <Link to="/about">About</Link>
           </Item>
-          <Item
-            sx={
-            
-              styleItem
-          }
-          >
-            Resume
-          </Item>
-          <Item
-            sx={
-              styleItem
-            }
-          >
-            Portfolios
-          </Item>
-          <Item
-            sx={ styleItem}
-          >
-            Bloges
-          </Item>
-          <Item
-            sx={ {...styleItem,marginBottom:'60px !important'}}
-          >
+          <Item sx={styleItem}>   <Link  to='/skills'> Skills</Link></Item>
+          <Item sx={styleItem}>   <Link  to='/resume'> Resume</Link></Item>
+          <Item sx={styleItem}>Portfolios</Item>
+       
+          <Item sx={{ ...styleItem, marginBottom: "60px !important" }}>
             contact
           </Item>
         </Stack>
