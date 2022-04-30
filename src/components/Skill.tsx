@@ -1,10 +1,9 @@
-
-import { Box, Grid, LinearProgress,useTheme } from "@mui/material";
+import { Box, Grid, LinearProgress, useTheme } from "@mui/material";
 import React from "react";
 import { IskillsTypeProps } from "../types/skillTypeProps";
 
 const Skill = ({ skill, percent }: IskillsTypeProps) => {
-    const theme = useTheme();
+  const theme = useTheme();
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -35,15 +34,22 @@ const Skill = ({ skill, percent }: IskillsTypeProps) => {
       >
         {skill}
       </Box>
-    
 
       <Grid spacing={1} container>
         <Grid xs={1} item>
-             <Box sx={{margin:'0px',padding:'0px'}}>{percent+'%'}</Box>     
-       
+          <Box sx={{ margin: "0px", padding: "0px" }}>{percent + "%"}</Box>
         </Grid>
         <Grid xs={9} item>
-          <LinearProgress sx={{marginTop:'10px',padding:"3px",background:`${theme.palette.info.main}`,color:`${theme.palette.primary.main}`}}  value={progress} variant="determinate" />
+          <LinearProgress
+            sx={{
+              marginTop: "10px",
+              padding: "3px",
+              background: `${theme.palette.info.main}`,
+              color: `${theme.palette.primary.main}`,
+            }}
+            value={progress}
+            variant="determinate"
+          />
         </Grid>
       </Grid>
     </Box>

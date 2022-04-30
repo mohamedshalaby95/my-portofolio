@@ -11,8 +11,8 @@ import About from "../pages/About";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "../themes/mainTheme";
 import LineStyle from "../components/LineStyle";
-import Skills from "../pages/Skills";
 import Resume from "../pages/Resume";
+
 // import { Stack } from "@mui/material";
 // import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -55,8 +55,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/skills" element={<Skills />} />
               <Route path="/resume" element={<Resume />} />
+           
             </Routes>
           </BrowserRouter>
         </Box>

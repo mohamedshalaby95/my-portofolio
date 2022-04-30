@@ -54,16 +54,21 @@ const SideNavbar = () => {
           <hr className={classes.default.hrStyel} />
 
           <Item sx={{ ...styleItem, marginTop: "60px !important" }}>
-            <Link to="/" style={{position:'relative',zIndex:4}}>Home</Link>
+            <Link to="/" style={{ position: "relative", zIndex: 4 }}>
+              Home
+            </Link>
           </Item>
 
           <Item sx={styleItem}>
             <Link to="/about">About</Link>
           </Item>
-          <Item sx={styleItem}>   <Link  to='/skills'> Skills</Link></Item>
-          <Item sx={styleItem}>   <Link  to='/resume'> Resume</Link></Item>
+          <Item sx={styleItem}>
+            {" "}
+            <Link to="/resume"> Resume</Link>
+          </Item>
+          
           <Item sx={styleItem}>Portfolios</Item>
-       
+
           <Item sx={{ ...styleItem, marginBottom: "60px !important" }}>
             contact
           </Item>

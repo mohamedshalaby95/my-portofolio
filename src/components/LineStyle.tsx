@@ -11,6 +11,7 @@ const borderMatches=useMediaQuery('(max-width:1024px)');
              <Box sx={{borderRight:`.3px solid #E2E2E2`,opacity:'.1'}}>1</Box>
              <Box sx={{borderRight:`.3px solid #E2E2E2`,opacity:'.1'}}>1</Box>
              <Box sx={{borderRight:`.3px solid #E2E2E2`,opacity:'.1'}}>1</Box>
+            
           </Stack>
         </div>
     );
