@@ -68,10 +68,9 @@ const SideNavbar = () => {
           </Item>
           
           <Item sx={styleItem}><Link to="/portfolio">Portfolios</Link></Item>
-
-          <Item sx={{ ...styleItem, marginBottom: "60px !important" }}>
-            contact
-          </Item>
+            
+          <Item sx={styleItem}><Link to="/contact">contact</Link></Item>
+         
         </Stack>
         <hr className={classes.default.hrStyel} />
         <footer className={classes.default.sidenavbarFooter}>
