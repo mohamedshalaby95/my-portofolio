@@ -67,7 +67,7 @@ const SideNavbar = () => {
             <Link to="/resume"> Resume</Link>
           </Item>
           
-          <Item sx={styleItem}>Portfolios</Item>
+          <Item sx={styleItem}><Link to="/portfolio">Portfolios</Link></Item>
 
           <Item sx={{ ...styleItem, marginBottom: "60px !important" }}>
             contact
