@@ -63,19 +63,7 @@ const Portfolio = () => {
           {projects?.map((el) => (
             <Grid
               key={el.srcImg}
-              sx={{
-                marginTop: "20px",
-                [theme.breakpoints.only("sm")]:  {
-                  xs: 12,
-                },
-                [theme.breakpoints.only("md")]: {
-                  xs: 6,
-                },
-
-                [theme.breakpoints.only("lg")]:  {
-                  xs: 4,
-                },
-              }}
+             
               item
             >
               {" "}
