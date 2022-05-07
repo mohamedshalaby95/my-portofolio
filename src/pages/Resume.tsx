@@ -27,18 +27,29 @@ const Resume = () => {
     { skill: "rxjs", percent: 55 },
   ];
   const matchSize = useMediaQuery("(max-width:768px)");
-   
+
   return (
-    <Box sx={{ background: "black", overflow: "auto", paddingBottom: "50px" }}>
+    <Box
+      sx={{ background: "#10121B", overflow: "auto", paddingBottom: "50px" }}
+    >
       <Heading value="MY SKILLS" />
 
       <section className="skills"></section>
       <Container>
         <Grid container sx={{ marginTop: "50px" }}>
           {skills?.map((el) => (
-            <Grid key={el.skill} sx={{ marginTop: "20px" }} xs={matchSize ? 12 : 6} item>
+            <Grid
+              key={el.skill}
+              sx={{ marginTop: "20px" }}
+              xs={matchSize ? 12 : 6}
+              item
+            >
               {" "}
-              <Skill key={el.skill} skill={el.skill} percent={el.percent} />{" "}
+              <Skill
+                key={el.skill}
+                skill={el.skill}
+                percent={el.percent}
+              />{" "}
             </Grid>
           ))}
         </Grid>
@@ -47,7 +58,7 @@ const Resume = () => {
       <section className="educaion">
         <Heading value="educaion" />
 
-        <Box sx={{marginTop:'50px',baackground:'green'}}>
+        <Box sx={{ marginTop: "50px", baackground: "green" }}>
           <Education />
         </Box>
       </section>

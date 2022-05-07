@@ -47,21 +47,21 @@ function App() {
             >
               <IconButton aria-label="close" onClick={handelStatusButton}>
                 {statusButton ? (
-                  <CloseIcon fontSize="large" />
+                  <CloseIcon fontSize="large"   sx={{color:"white"}}/>
                 ) : (
-                  <MenuOpenIcon fontSize="large" />
+                  <MenuOpenIcon fontSize="large" sx={{color:"white"}} />
                 )}
               </IconButton>
             </Box>
-
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/portfolio" element={<Portfolio />}/>
-              <Route path="/contact" element={<Contact />}/>
+         
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
            
-            </Routes>
           </BrowserRouter>
         </Box>
       </Box>

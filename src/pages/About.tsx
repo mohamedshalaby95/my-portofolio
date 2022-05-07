@@ -14,7 +14,7 @@ const About = () => {
     color: theme.palette.text.secondary,
   }));
   return (
-    <div style={{ background: "black", overflow: "auto" }}>
+    <div style={{ background: "#10121B", overflow: "auto" }}>
       <header>
         <Heading value="about me" />
       </header>
@@ -23,12 +23,19 @@ const About = () => {
       </section>
       <section className="service">
         <Heading value="services" />
-        <Box sx={{ marginTop: "50px" ,position:'relative',zIndex:2 ,marginBottom:'50px' }}>
+        <Box
+          sx={{
+            marginTop: "50px",
+            position: "relative",
+            zIndex: 2,
+            marginBottom: "50px",
+          }}
+        >
           <AboutCard />
         </Box>
       </section>
     </div>
-  )
+  );
 };
 
 export default About;

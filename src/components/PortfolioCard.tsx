@@ -11,7 +11,13 @@ import {
 
 import { Iproject } from "../types/project";
 
-const PortfolioCard = ({ srcImg, name, demoLink, sourceCode,technologies }: Iproject) => {
+const PortfolioCard = ({
+  srcImg,
+  name,
+  demoLink,
+  sourceCode,
+  technologies,
+}: Iproject) => {
   return (
     <>
       <Card
@@ -64,44 +70,50 @@ const PortfolioCard = ({ srcImg, name, demoLink, sourceCode,technologies }: Ipro
           }}
         >
           <Box>
-
-          <Button
-            variant="contained"
-            sx={{
-              background: "black",
-              marginRight: "3px",
-              "&:hover": {
-                background: "info.main",
-                transition: "all 1s",
-              },
-            }}
-            onClick={() => {
-              window.open(`${demoLink}`);
-            }}
-          >
-            View Demo
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              background: "black",
-              "&:hover": {
-                background: "info.main",
-                transition: "all 1s",
-              },
-            }}
-            onClick={() => {
-              window.open(`${sourceCode}`);
-            }}
-          >
-            Source Code{" "}
-          </Button>
+            <Button
+              variant="contained"
+              sx={{
+                background: "black",
+                marginRight: "3px",
+                "&:hover": {
+                  background: "info.main",
+                  transition: "all 1s",
+                },
+              }}
+              onClick={() => {
+                window.open(`${demoLink}`);
+              }}
+            >
+              View Demo
+            </Button>
+            <Button
+              variant="contained"
+              sx={{
+                background: "black",
+                "&:hover": {
+                  background: "info.main",
+                  transition: "all 1s",
+                },
+              }}
+              onClick={() => {
+                window.open(`${sourceCode}`);
+              }}
+            >
+              Source Code{" "}
+            </Button>
           </Box>
-          <Box sx={{fontSize:'1.2rem',fontWeight:'900',marginTop:'4px'}}>
+          <Box sx={{ fontSize: "1.2rem", fontWeight: "900", marginTop: "4px" }}>
             Technologies Used
           </Box>
-          <Box sx={{fontSize:'1rem',fontWeight:'900',marginTop:'4px',textAlign:'center'}}>
-           {technologies}
+          <Box
+            sx={{
+              fontSize: "1rem",
+              fontWeight: "900",
+              marginTop: "4px",
+              textAlign: "center",
+            }}
+          >
+            {technologies}
           </Box>
         </Stack>
       </Card>

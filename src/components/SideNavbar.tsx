@@ -1,50 +1,23 @@
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
+
 import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
-import { styled } from "@mui/material/styles";
+
 import * as classes from "../styles/Navbar.module.css";
+import "../styles/active.css";
+import { styleItem, styleLink, Item } from "../utilities/sideNavbarStyle";
 
-import { Link } from "react-router-dom";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-const styleItem = {
-  cursor: "pointer",
-  textTransform: "upperCase",
-  width: "90%",
-  padding: "10px",
-  marginTop: "1px !important",
-  borderRadius: "0px",
-  color: "white",
-  background: "transparent",
-  position: "relative",
-  zIndex: "5",
-  "&:before": {
-    content: `''`,
-    position: "absolute",
-    left: "0",
-    backgroundColor: "#037FFF",
-    width: "0",
-    top: "0",
-    bottom: "0",
-    transition: "2s ease-in-out all",
-    opacity: ".6",
-  },
-  "&:hover:before": {
-    width: "100%",
-  },
-};
+import { Link, useLocation } from "react-router-dom";
 
 const SideNavbar = () => {
+  const location = useLocation();
+
+  const getNavLinkClass = (path: string) => {
+    return location.pathname === path ? "active" : "";
+  };
   return (
     <>
-      <Box sx={{ background: "black", height: "100vh" }}>
+      <Box sx={{ background: "#191D2B", height: "100vh" }}>
         <Stack spacing={2} alignItems="center">
           <Avatar
             alt="pesonal image"
@@ -53,24 +26,47 @@ const SideNavbar = () => {
           />
           <hr className={classes.default.hrStyel} />
 
-          <Item sx={{ ...styleItem, marginTop: "60px !important" }}>
-            <Link to="/" style={{ position: "relative", zIndex: 4 }}>
+          <Link to="/" style={styleLink}>
+            <Item
+              className={` ${getNavLinkClass("/") ? "active" : " "} `}
+              sx={{ ...styleItem, marginTop: "60px !important" }}
+            >
               Home
-            </Link>
-          </Item>
-
-          <Item sx={styleItem}>
-            <Link to="/about">About</Link>
-          </Item>
-          <Item sx={styleItem}>
-            {" "}
-            <Link to="/resume"> Resume</Link>
-          </Item>
-          
-          <Item sx={styleItem}><Link to="/portfolio">Portfolios</Link></Item>
-            
-          <Item sx={styleItem}><Link to="/contact">contact</Link></Item>
-         
+            </Item>
+          </Link>
+          <Link to="/about" style={styleLink}>
+            <Item
+              className={` ${getNavLinkClass("/about") ? "active" : " "} `}
+              sx={styleItem}
+            >
+              About
+            </Item>
+          </Link>
+          <Link to="/resume" style={styleLink}>
+            <Item
+              className={` ${getNavLinkClass("/resume") ? "active" : " "} `}
+              sx={styleItem}
+            >
+              {" "}
+              Resume
+            </Item>
+          </Link>
+          <Link to="/portfolio" style={styleLink}>
+            <Item
+              className={` ${getNavLinkClass("/portfolio") ? "active" : " "} `}
+              sx={styleItem}
+            >
+              Portfolios
+            </Item>
+          </Link>
+          <Link to="/contact" style={styleLink}>
+            <Item
+              className={` ${getNavLinkClass("/contact") ? "active" : " "} `}
+              sx={styleItem}
+            >
+              contact
+            </Item>
+          </Link>
         </Stack>
         <hr className={classes.default.hrStyel} />
         <footer className={classes.default.sidenavbarFooter}>

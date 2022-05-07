@@ -1,4 +1,3 @@
-export interface Iheading{
- value:string
-
+export interface Iheading {
+  value: string;
 }

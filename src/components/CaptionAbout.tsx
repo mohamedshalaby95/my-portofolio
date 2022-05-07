@@ -19,7 +19,8 @@ const CaptionAbout = () => {
           <Grid item xs={matchMediaQuery ? 12 : 6}>
             <ImageDailog />
           </Grid>
-          <Grid item xs={matchMediaQuery ? 12 : 6}>
+          <Grid item xs={matchMediaQuery ? 12 : 6} sx={{display:'flex',alignItems:"center"}}>
+            <Box>
             <Typography variant="h5" component={"h5"}>
               I am{" "}
               <Box
@@ -199,6 +200,7 @@ const CaptionAbout = () => {
                       : Avaliable
                     </Typography>
                   </Grid>
+                  
                 </Grid>
               </Container>
             </Stack>
@@ -218,6 +220,7 @@ const CaptionAbout = () => {
             >
               Download Resume
             </Button>
+            </Box>
           </Grid>
         </Grid>
       </Container>

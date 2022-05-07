@@ -35,14 +35,15 @@ const Skill = ({ skill, percent }: IskillsTypeProps) => {
         {skill}
       </Box>
 
-      <Grid spacing={1} container>
+      <Grid spacing={4} container  sx={{display:"flex" ,alignItems:"center"}}>
+        
         <Grid xs={1} item>
-          <Box sx={{ margin: "0px", padding: "0px" }}>{percent + "%"}</Box>
+          <Box sx={{ margin: "0px", padding: "0px" }}>{percent + "%"+""+""}</Box>
         </Grid>
         <Grid xs={9} item>
           <LinearProgress
             sx={{
-              marginTop: "10px",
+             
               padding: "3px",
               background: `${theme.palette.info.main}`,
               color: `${theme.palette.primary.main}`,
@@ -51,6 +52,7 @@ const Skill = ({ skill, percent }: IskillsTypeProps) => {
             variant="determinate"
           />
         </Grid>
+  
       </Grid>
     </Box>
   );

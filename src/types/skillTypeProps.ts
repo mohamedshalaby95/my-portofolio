@@ -1,5 +1,4 @@
-export interface IskillsTypeProps{
-    skill:string,
-    percent:number
-   
-   }
+export interface IskillsTypeProps {
+  skill: string;
+  percent: number;
+}

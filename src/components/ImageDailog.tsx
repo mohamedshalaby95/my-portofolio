@@ -55,10 +55,10 @@ export default function ImageDailog() {
 
   return (
     <div>
-      <Box 
+      <Box
         sx={{
           position: "relative",
-          
+
           "&:before": {
             content: `''`,
             position: "absolute",
@@ -83,7 +83,6 @@ export default function ImageDailog() {
       >
         <CardMedia
           component="img"
-          
           image="images/shalaby.jpg"
           alt=" personal image"
           sx={{

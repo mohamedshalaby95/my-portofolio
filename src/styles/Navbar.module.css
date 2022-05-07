@@ -1,9 +1,10 @@
-.hrStyel{
-border:  solid  .5px #2e344e;
-width: 100%;
-margin-top: 20px;
+.hrStyel {
+    border: solid .5px #2e344e;
+    width: 100%;
+    margin-top: 20px;
 }
-.sidenavbarFooter{
+
+.sidenavbarFooter {
     text-align: center;
     margin-top: 20px;
     font-weight: 700;
