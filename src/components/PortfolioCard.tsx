@@ -59,7 +59,7 @@ const PortfolioCard = ({
           sx={{
             position: "absolute",
             bottom: "30%",
-            left: "-290px",
+            left: "-310px",
             background: "white",
             width: "80%",
             height: "50%",
