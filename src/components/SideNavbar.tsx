@@ -21,7 +21,7 @@ const SideNavbar = () => {
         <Stack spacing={2} alignItems="center">
           <Avatar
             alt="pesonal image"
-            src="/images/shalaby.jpg"
+            src="/images/shalaby personal.jpeg"
             sx={{ width: 150, height: 150, marginTop: "70px" }}
           />
           <hr className={classes.default.hrStyel} />

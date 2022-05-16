@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Stack
         sx={{
-          height: "100%",
+          height: "100VH",
           background: "black url(https://j.gifs.com/KeBY2b.gif)",
         }}
         justifyContent="center"
@@ -43,7 +43,7 @@ const Home = () => {
             fontWeight: "700",
           }}
         >
-          {!matches
+          {/* {!matches
             ? ` An enthusiastic software developer with 1+ years of experience 
           who seek an opportunity in the software development field to be part
           in an organization where I can contribute my skills in the
@@ -51,7 +51,28 @@ const Home = () => {
             : `   An enthusiastic software developer with 1+ years of experience 
           who seek an opportunity in the software development field to be part
           in an organization where I can contribute my skills in the
-          organization growth.`}
+          organization growth.`} */}
+
+I have 1 years of experience in developing web  using React ,Angular +2 framework   in Frontend ,NodeJs,ExpressJs and MongoDB in Backend.<br />
+
+
+        </Box>
+        <Box
+          sx={{
+           textAlign:'center',
+            width: matches ? "90%" : "80%",
+            color: "secandary.main",
+            marginTop: "20px",
+            lineHeight: "25px",
+            fontWeight: "700",
+          }}
+        >
+       
+
+
+My mother tongue as a developer is Javascript and Typescript languages, and my proficient stack is 
+ MEARN ,I have strong knowledge of Javascript ES5, ES6, and also TypeScript. I'm always enthusiastic about JS 
+ and its frameworks.
         </Box>
 
         <Stack direction="row" spacing={2} sx={{ marginTop: "50px" }}>

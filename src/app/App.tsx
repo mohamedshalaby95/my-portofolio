@@ -15,10 +15,10 @@ import Resume from "../pages/Resume";
 import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
 
-// import { Stack } from "@mui/material";
-// import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 function App() {
+
   const [statusButton, setStatusButton] = useState<boolean>(false);
   const [toggleNavbar, setToggleNavbar] = useState<number>(-260);
   const [toggleButton, setToggleButton] = useState<number>(0);
@@ -29,9 +29,10 @@ function App() {
   }, [setStatusButton]);
 
   return (
+   
     <ThemeProvider theme={theme}>
-      <Box className="App">
-        <Box className={classes.default.routingComponent}>
+      <Box className="App" >
+        <Box className={classes.default.routingComponent} >
           <BrowserRouter>
             <Box
               sx={{ left: `${toggleNavbar}px ` }}
@@ -39,7 +40,7 @@ function App() {
             >
               <SideNavbar />
             </Box>
-            <LineStyle />
+          
 
             <Box
               sx={{ left: `${toggleButton}px ` }}
@@ -53,7 +54,9 @@ function App() {
                 )}
               </IconButton>
             </Box>
-         
+            <Box sx={{position:"relative"}}>
+            <LineStyle />
+
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -61,11 +64,13 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
-           
+            
+            </Box>
           </BrowserRouter>
         </Box>
       </Box>
     </ThemeProvider>
+
   );
 }
 

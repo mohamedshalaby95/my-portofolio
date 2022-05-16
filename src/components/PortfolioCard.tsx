@@ -67,14 +67,16 @@ const PortfolioCard = ({
             alignItems: "center",
             justifyContent: "center",
             transition: "all 1s ",
+            padding:'10px',
           }}
         >
           <Box>
             <Button
               variant="contained"
               sx={{
-                background: "black",
+                backgroundColor:"info.main",
                 marginRight: "3px",
+             
                 "&:hover": {
                   background: "info.main",
                   transition: "all 1s",
@@ -89,7 +91,10 @@ const PortfolioCard = ({
             <Button
               variant="contained"
               sx={{
-                background: "black",
+                
+              
+                backgroundColor:"info.main",
+              
                 "&:hover": {
                   background: "info.main",
                   transition: "all 1s",
@@ -102,7 +107,7 @@ const PortfolioCard = ({
               Source Code{" "}
             </Button>
           </Box>
-          <Box sx={{ fontSize: "1.2rem", fontWeight: "900", marginTop: "4px" }}>
+          <Box sx={{ fontSize: "1.2rem", fontWeight: "900", marginTop: "4px" ,color:"primary.main"}}>
             Technologies Used
           </Box>
           <Box
@@ -111,6 +116,8 @@ const PortfolioCard = ({
               fontWeight: "900",
               marginTop: "4px",
               textAlign: "center",
+              color:"info.main",
+              
             }}
           >
             {technologies}

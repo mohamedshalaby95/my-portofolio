@@ -12,25 +12,31 @@ const Resume = () => {
     { skill: "es6", percent: 90 },
     { skill: "html5", percent: 95 },
     { skill: "css3", percent: 91 },
+    { skill: "sass", percent: 85 },
     { skill: "Bootstarp ", percent: 95 },
     { skill: "Responsive Dessign", percent: 95 },
     { skill: "jquery", percent: 80 },
     { skill: "angular 2+", percent: 80 },
+    { skill: "rxjs", percent: 55 },
     { skill: "reactJs", percent: 85 },
     { skill: "nextJs", percent: 60 },
     { skill: "material ui", percent: 70 },
-    { skill: "nodeJs", percent: 85 },
+    { skill: "nodeJs", percent: 90 },
+    { skill: "Web Services (REST).", percent: 90 },
     { skill: "express", percent: 85 },
     { skill: "nestJs", percent: 60 },
+    { skill: "redux", percent: 85 },
+    { skill: "redux toolkit", percent: 80 },
     { skill: "mongoDb", percent: 75 },
-    { skill: "redux", percent: 75 },
-    { skill: "rxjs", percent: 55 },
+    { skill: "redisDb", percent: 75 },
+    { skill: "source control", percent: 70 },
+    { skill: "unit test", percent: 60 },
   ];
   const matchSize = useMediaQuery("(max-width:768px)");
 
   return (
     <Box
-      sx={{ background: "#10121B", overflow: "auto", paddingBottom: "50px" }}
+      sx={{ background: "#10121B", overflow: "auto",height:"auto", paddingBottom: "50px" }}
     >
       <Heading value="MY SKILLS" />
 

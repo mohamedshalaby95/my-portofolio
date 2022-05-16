@@ -1,8 +1,10 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "http://mohamedshalaby.com/",
   "private": true,
   "dependencies": {
+    "@dnd-kit/core": "^5.0.3",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.6.2",
